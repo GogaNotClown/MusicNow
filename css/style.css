@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Google Sans", sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    all: unset;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1c1c1c;
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 35px;
+    border: 2px solid #1C1C1C;
+}
+
+.header-logo img {
+    height: 40px;
+}
+
+.nav .nav-list {
+    display: flex;
+}
+
+.nav .nav-elem {
+    margin-left: 20px;
+}
+
+.nav .nav-elem:first-child {
+    margin-left: 0;
+}
+
+.nav .nav-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 30px;
+    color: #1C1C1C;
+}
+
+.hero {
+    padding-top: 150px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    color: #1C1C1C;
+    width: 475px;
+}
+
+.hero-desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    color: #1C1C1C;
+    margin-top: 25px;
+    width: 500px;
+}
+
+.hero-img {
+    width: 160px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: #1C1C1C;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    color: #1C1C1C;
+    font-size: 1.35rem;
+}
+
+.social-icon {
+    transition: .20s;
+}
+
+.social-icon:hover {
+    background-color: #1C1C1C;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: .50rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    padding-top: 125px;
+}
+
+.modal-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    place-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    position: relative;
+}
+
+.modal-content .modal-title {
+    margin: 0 0 25px;
+    text-align: center;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.modal-content .modal-input {
+    display: block;
+    padding: 15px;
+    border: 1px solid #1C1C1C;
+    margin-bottom: 20px;
+    width: 55%;
+}
+
+.modal-content .modal-button[type="submit"] {
+    background-color: #1C1C1C;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 55%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-desc {
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .hero-img {
+        width: 120px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-desc {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .hero-img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-logo {
+        font-size: 24px;
+    }
+
+    .social-icons {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer-logo {
+        font-size: 20px;
+    }
+
+    .social-icons {
+        font-size: 1rem;
+    }
+}
